@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
+body {
+  background-color: #f9fafb; /* Tailwind bg-gray-50 */
+  color: #1f2937;            /* Tailwind text-gray-800 */
+}

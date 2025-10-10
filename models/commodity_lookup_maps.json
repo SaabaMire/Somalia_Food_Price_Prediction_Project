@@ -1,0 +1,112 @@
+{
+    "Cowpeas": {
+        "category": "pulses and nuts",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Exchange rate": {
+        "category": "non-food",
+        "unit": "USD/LCU",
+        "pricetype": "Retail"
+    },
+    "Fuel (Super Petrol)": {
+        "category": "non-food",
+        "unit": "L",
+        "pricetype": "Retail"
+    },
+    "Fuel (diesel)": {
+        "category": "non-food",
+        "unit": "L",
+        "pricetype": "Retail"
+    },
+    "Livestock (Goat)": {
+        "category": "meat, fish and eggs",
+        "unit": "Unit",
+        "pricetype": "Retail"
+    },
+    "Maize (white)": {
+        "category": "cereals and tubers",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Meat (camel)": {
+        "category": "meat, fish and eggs",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Meat (goat)": {
+        "category": "meat, fish and eggs",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Milk (camel)": {
+        "category": "milk and dairy",
+        "unit": "L",
+        "pricetype": "Retail"
+    },
+    "Milk (cow, fresh)": {
+        "category": "milk and dairy",
+        "unit": "L",
+        "pricetype": "Retail"
+    },
+    "Oil (vegetable, imported)": {
+        "category": "oil and fats",
+        "unit": "L",
+        "pricetype": "Retail"
+    },
+    "Onions": {
+        "category": "vegetables and fruits",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Pasta": {
+        "category": "cereals and tubers",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Potatoes": {
+        "category": "cereals and tubers",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Rice (imported)": {
+        "category": "cereals and tubers",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Salt": {
+        "category": "miscellaneous food",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Sorghum": {
+        "category": "cereals and tubers",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Sorghum (red)": {
+        "category": "cereals and tubers",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Sorghum (white)": {
+        "category": "cereals and tubers",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Sugar (white)": {
+        "category": "miscellaneous food",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Wheat flour": {
+        "category": "cereals and tubers",
+        "unit": "KG",
+        "pricetype": "Retail"
+    },
+    "Wheat flour (imported)": {
+        "category": "cereals and tubers",
+        "unit": "KG",
+        "pricetype": "Retail"
+    }
+}

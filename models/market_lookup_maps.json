@@ -1,0 +1,272 @@
+{
+    "Afgooye": {
+        "admin1": "Shabelle Hoose",
+        "admin2": "Afgooye",
+        "latitude": 2.141580104827881,
+        "longitude": 45.11869812011719
+    },
+    "Afmadow": {
+        "admin1": "Juba Hoose",
+        "admin2": "Afmadow",
+        "latitude": 0.5148599743843079,
+        "longitude": 42.0730094909668
+    },
+    "Baidoa": {
+        "admin1": "Bay",
+        "admin2": "Baydhaba",
+        "latitude": 3.117180109024048,
+        "longitude": 43.64690017700195
+    },
+    "Bakaara": {
+        "admin1": "Banadir",
+        "admin2": "Banadir",
+        "latitude": 2.048031,
+        "longitude": 45.32
+    },
+    "Balcad": {
+        "admin1": "Shabelle Dhexe",
+        "admin2": "Balcad",
+        "latitude": 2.359260082244873,
+        "longitude": 45.38964080810547
+    },
+    "Belet Xaawo": {
+        "admin1": "Gedo",
+        "admin2": "Belet Xaawo",
+        "latitude": 3.78074,
+        "longitude": 41.89431
+    },
+    "Beletweyne": {
+        "admin1": "Hiraan",
+        "admin2": "Belet Weyne",
+        "latitude": 4.735829830169678,
+        "longitude": 45.203609466552734
+    },
+    "Berbera": {
+        "admin1": "Woqooyi Galbeed",
+        "admin2": "Berbera",
+        "latitude": 10.44254,
+        "longitude": 45.01474
+    },
+    "Borama": {
+        "admin1": "Awdal",
+        "admin2": "Borama",
+        "latitude": 9.938690185546877,
+        "longitude": 43.18392181396485
+    },
+    "Bossaso": {
+        "admin1": "Bari",
+        "admin2": "Bossaso",
+        "latitude": 11.26,
+        "longitude": 49.18
+    },
+    "Buale": {
+        "admin1": "Juba Dhexe",
+        "admin2": "Bu'aale",
+        "latitude": 1.08,
+        "longitude": 42.58
+    },
+    "Buloburto": {
+        "admin1": "Hiraan",
+        "admin2": "Bulo Burto",
+        "latitude": 3.851941108703613,
+        "longitude": 45.56511688232422
+    },
+    "Burco": {
+        "admin1": "Togdheer",
+        "admin2": "Burco",
+        "latitude": 9.52749,
+        "longitude": 45.537472
+    },
+    "Burtinle": {
+        "admin1": "Nugaal",
+        "admin2": "Burtinle",
+        "latitude": 7.64157,
+        "longitude": 47.83103
+    },
+    "Cabudwaaq": {
+        "admin1": "Galgaduud",
+        "admin2": "Cabudwaaq",
+        "latitude": 6.24178,
+        "longitude": 46.3072
+    },
+    "Cadaado": {
+        "admin1": "Galgaduud",
+        "admin2": "Cadaado",
+        "latitude": 6.14568,
+        "longitude": 46.62712
+    },
+    "Cadale": {
+        "admin1": "Shabelle Dhexe",
+        "admin2": "Cadale",
+        "latitude": 2.7568,
+        "longitude": 46.319
+    },
+    "Ceel Barde": {
+        "admin1": "Bakool",
+        "admin2": "Ceel Barde",
+        "latitude": 4.82821,
+        "longitude": 43.659931
+    },
+    "Ceel Waaq": {
+        "admin1": "Gedo",
+        "admin2": "Ceel Waaq",
+        "latitude": 2.78767,
+        "longitude": 40.998291
+    },
+    "Ceerigaabo": {
+        "admin1": "Sanaag",
+        "admin2": "Ceerigaabo",
+        "latitude": 10.621822,
+        "longitude": 47.36813
+    },
+    "Dhuusamarreeb": {
+        "admin1": "Galgaduud",
+        "admin2": "Dhuusamarreeb",
+        "latitude": 5.537642955780029,
+        "longitude": 46.38669967651367
+    },
+    "Dinsoor": {
+        "admin1": "Bay",
+        "admin2": "Diinsoor",
+        "latitude": 2.41,
+        "longitude": 42.98
+    },
+    "Doolow": {
+        "admin1": "Gedo",
+        "admin2": "Doolow",
+        "latitude": 4.163579940795898,
+        "longitude": 42.076171875
+    },
+    "Eyl": {
+        "admin1": "Nugaal",
+        "admin2": "Eyl",
+        "latitude": 7.979410171508789,
+        "longitude": 49.81772994995117
+    },
+    "Gaalkacyo": {
+        "admin1": "Mudug",
+        "admin2": "Gaalkacyo",
+        "latitude": 6.772749,
+        "longitude": 47.424278
+    },
+    "Garowe": {
+        "admin1": "Nugaal",
+        "admin2": "Garoowe",
+        "latitude": 8.4,
+        "longitude": 48.48
+    },
+    "Hargeysa": {
+        "admin1": "Woqooyi Galbeed",
+        "admin2": "Hargeysa",
+        "latitude": 9.559749603271484,
+        "longitude": 44.06678009033203
+    },
+    "Hobyo": {
+        "admin1": "Mudug",
+        "admin2": "Hobyo",
+        "latitude": 5.34743,
+        "longitude": 48.5262
+    },
+    "Jalalaqsi": {
+        "admin1": "Hiraan",
+        "admin2": "Jalalaqsi",
+        "latitude": 3.38342,
+        "longitude": 45.59693
+    },
+    "Jariiban": {
+        "admin1": "Mudug",
+        "admin2": "Jariiban",
+        "latitude": 7.213449954986572,
+        "longitude": 48.85103988647461
+    },
+    "Jowhar": {
+        "admin1": "Shabelle Dhexe",
+        "admin2": "Jowhar",
+        "latitude": 2.780874967575073,
+        "longitude": 45.49681854248047
+    },
+    "Karaan": {
+        "admin1": "Banadir",
+        "admin2": "Banadir",
+        "latitude": 2.065160036087036,
+        "longitude": 45.38999938964844
+    },
+    "Kismayo": {
+        "admin1": "Juba Hoose",
+        "admin2": "Kismaayo",
+        "latitude": -0.360289990901947,
+        "longitude": 42.54626083374024
+    },
+    "Laas Caanood": {
+        "admin1": "Sool",
+        "admin2": "Laas Caanood",
+        "latitude": 8.48,
+        "longitude": 47.36
+    },
+    "Luuq": {
+        "admin1": "Gedo",
+        "admin2": "Luuq",
+        "latitude": 3.79999,
+        "longitude": 42.54459
+    },
+    "Marka (Shabelle Hoose)": {
+        "admin1": "Shabelle Hoose",
+        "admin2": "Marka",
+        "latitude": 1.71,
+        "longitude": 44.76
+    },
+    "Owdweyne": {
+        "admin1": "Togdheer",
+        "admin2": "Owdweyne",
+        "latitude": 9.407010078430176,
+        "longitude": 45.06357955932617
+    },
+    "Qansax Dheere": {
+        "admin1": "Bay",
+        "admin2": "Qansax Dheere",
+        "latitude": 2.87123,
+        "longitude": 43.004341
+    },
+    "Qardho": {
+        "admin1": "Bari",
+        "admin2": "Qardho",
+        "latitude": 9.50306999999999,
+        "longitude": 49.0882609999999
+    },
+    "Qorioley": {
+        "admin1": "Shabelle Hoose",
+        "admin2": "Qoryooley",
+        "latitude": 1.78,
+        "longitude": 44.53
+    },
+    "Rab Dhuure": {
+        "admin1": "Bakool",
+        "admin2": "Rab Dhuure",
+        "latitude": 4.35047,
+        "longitude": 43.163589
+    },
+    "Taleex": {
+        "admin1": "Sool",
+        "admin2": "Taleex",
+        "latitude": 9.14839,
+        "longitude": 48.42077
+    },
+    "Wadajir": {
+        "admin1": "Banadir",
+        "admin2": "Banadir",
+        "latitude": 2.025769,
+        "longitude": 45.301093
+    },
+    "Xudun": {
+        "admin1": "Sool",
+        "admin2": "Xudun",
+        "latitude": 9.154231,
+        "longitude": 47.475393
+    },
+    "Xudur": {
+        "admin1": "Bakool",
+        "admin2": "Xudur",
+        "latitude": 4.123030185699463,
+        "longitude": 43.89012145996094
+    }
+}
