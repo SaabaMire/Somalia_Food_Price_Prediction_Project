@@ -1,107 +1,163 @@
+# Somalia Food Price Predictor
 
-# Somalia Food Price Prediction Project
+A full-stack machine-learning application for estimating food commodity prices in Somalia. The project combines a Flask prediction API, three regression models, and a React/Vite interface.
 
-## 📜 Project Description
+## Overview
 
-This is a complete, full-stack Machine Learning solution for predicting highly **volatile food commodity prices** in Somalia. The predictive system features a multi-model Python backend (Flask API) and a modern **React.js + Tailwind CSS** frontend.
+The application asks for five inputs:
 
-**Key Feature: Smart Input Defaults.** The solution requires the user to input **only 5 core, easy-to-obtain features** (commodity, market, unit, year, month). The backend intelligently enriches the request by automatically providing the **6 necessary geospatial and administrative features** (e.g., admin1, latitude) using pre-calculated defaults, ensuring a fast, user-friendly experience without sacrificing model accuracy.
+- Commodity
+- Market
+- Unit
+- Year
+- Month
 
-## ✅ Core Requirements
+The backend enriches these inputs with market location and commodity metadata stored in lookup files. It then prepares the model features and returns a price estimate in Somali shillings (SLS).
 
-| Requirement | Status | Notes |
-| :--- | :--- | :--- |
-| **Simplified User Input** | **DONE** | API requires only 5 key features; 6 remaining features are handled by smart defaults. |
-| **Frontend Tech** | **DONE** | Implemented with React.js and Tailwind CSS for a beautiful, responsive UI. |
-| **Algorithms** | **DONE** | Includes Linear Regression (LR), Random Forest (RF), and **Gradient Boosting Regressor (GBR)**. |
-| **Deployment** | **DONE** | Flask API exposes /predict and /metrics endpoints for dynamic prediction. |
-| **Documentation** | **DONE** | Comprehensive README.md and detailed project_paper.md provided. |
+## Models
 
----
+The training pipeline compares three regression algorithms:
 
-## 🚀 Setup & Run Instructions
+| Model | R² | MAE (SLS) | RMSE (SLS) |
+| --- | ---: | ---: | ---: |
+| Linear Regression | 0.8074 | 5,194.45 | 7,043.28 |
+| Random Forest | 0.9808 | 1,048.87 | 2,224.20 |
+| Gradient Boosting | 0.8954 | 3,518.89 | 5,190.07 |
 
-### 1. Backend Setup (Python)
+These values come from the included `models/model_metrics.json` artifact. Random Forest produced the strongest test-set result in the current experiment.
 
-Ensure you have Python 3.8+ installed and all dependencies listed in `requirements.txt` are installed (`pip install -r requirements.txt`).
+## Tech Stack
 
-**Note:** Ensure your file structure includes a `dataset/` directory containing `wfp_food_prices_som.csv`, `src/` for training scripts, and `api/` for the server, as per project standards.
+- Python, pandas, NumPy, and scikit-learn
+- Flask and Flask-CORS
+- React 19, Vite, and Tailwind CSS
+- Joblib for saved preprocessing and model artifacts
+
+## Repository Structure
+
+```text
+.
+├── api/                 # Flask API
+├── dataset/             # Raw and processed Somalia food-price data
+├── frontend/            # React/Vite user interface
+├── models/              # Trained models, metrics, and lookup artifacts
+├── src/                 # Preprocessing, training, and inference utilities
+├── project_paper.md     # Detailed project report
+└── requirements.txt     # Python dependencies
+```
+
+## Getting Started
+
+Run all backend commands from the repository root because the scripts use root-relative paths.
+
+### 1. Clone the repository
 
 ```bash
-# 1. Clean data and generate preprocessing artifacts (scaler, columns list, and defaults)
+git clone https://github.com/SaabaMire/Somalia_Food_Price_Prediction_Project.git
+cd Somalia_Food_Price_Prediction_Project
+```
+
+### 2. Set up the Python environment
+
+Python 3.8 or newer is recommended.
+
+```bash
+python -m venv .venv
+```
+
+Activate the environment on Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Or on macOS/Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+Install the backend dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 3. Prepare the data and train the models
+
+```bash
 python src/preprocessing.py
-
-# 2. Train and evaluate all three models (LR, RF, GBR) and save them to the models/ directory
 python src/model.py
+```
 
-# 3. Start the API server
+These commands regenerate the cleaned dataset, lookup maps, scaler, metrics, and all three trained model files.
+
+### 4. Start the Flask API
+
+```bash
 python api/app.py
-# The API will be available at [http://127.0.0.1:8080](http://127.0.0.1:8080)
-````
-
-### 2\. Frontend Setup (React/JS)
-
-The frontend is a single React component file (`frontend/src/PredictionForm.js`) designed to interact with the Python API running on port 8080.
-
-1.  **Serve the React Component:** In a production setup, you would use a tool like Vite or webpack. For this environment, simply ensure the file is served, pointing API calls to `http://127.0.0.1:8080`.
-
-2.  **Interaction:** The frontend handles user input, model selection, and displays the predicted price and model performance metrics fetched from the `/predict` and `/metrics` API endpoints, respectively.
-
------
-
-## 3\. Example API Usage (Inference)
-
-The API provides two endpoints: `/metrics` (GET) and `/predict` (POST).
-
-### 3.1 Fetching Model Metrics
-
-```bash
-curl -X GET "[http://127.0.0.1:8080/metrics](http://127.0.0.1:8080/metrics)"
 ```
 
-**Example Response:**
+The API will be available at `http://127.0.0.1:8000`.
 
-```json
-{
-  "gbr": { "R2": 0.895, "MAE": 3519.0 },
-  "lr": { "R2": 0.807, "MAE": 5194.0 },
-  "rf": { "R2": 0.981, "MAE": 1049.0 }
-}
-```
+### 5. Start the frontend
 
-### 3.2 Making a Prediction (Using 5-Feature Input)
-
-The backend handles the missing `admin1`, `latitude`, etc., based on the provided `market` and `commodity` through smart lookup logic defined in `utils.py`.
+Open a second terminal:
 
 ```bash
-curl -X POST "[http://127.0.0.1:8080/predict?model=rf](http://127.0.0.1:8080/predict?model=rf)" \
--H "Content-Type: application/json" \
--d '{
+cd frontend
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite. The frontend is configured to call the Flask API on port `8000`.
+
+## API Usage
+
+### Health check
+
+```bash
+curl http://127.0.0.1:8000/
+```
+
+### Model metrics
+
+```bash
+curl http://127.0.0.1:8000/metrics
+```
+
+### Price prediction
+
+Choose `lr`, `rf`, or `gbr` with the `model` query parameter:
+
+```bash
+curl -X POST "http://127.0.0.1:8000/predict?model=rf" \
+  -H "Content-Type: application/json" \
+  -d '{
     "commodity": "Sorghum (red)",
     "market": "Bakaara",
     "unit": "KG",
     "year": 2026,
     "month": 5
-}'
+  }'
 ```
 
-**Example Prediction Response:**
+Example response:
 
 ```json
 {
   "model": "rf",
-  "predicted_price": 75000.56,
-  "unit": "SLS"
+  "predicted_price": 75000.56
 }
 ```
 
------
+## How Prediction Works
 
-## 4\. Documentation and Code
+1. `src/preprocessing.py` cleans the dataset, builds categorical features, scales numeric fields, and creates lookup artifacts.
+2. `src/model.py` trains and evaluates Linear Regression, Random Forest, and Gradient Boosting models.
+3. `src/utils.py` enriches the five user inputs with stored market and commodity defaults and reproduces the training feature layout.
+4. `api/app.py` exposes the saved models through `/predict` and reports evaluation results through `/metrics`.
 
-  * **Project Paper:** The detailed project report and reflection paper are available in `project_paper.md`.
-  * **Code Structure:**
-      * `src/preprocessing.py`: Handles data cleaning, scaling, and saves necessary artifacts.
-      * `src/model.py`: Trains and evaluates the three ML algorithms.
-      * `api/app.py`: The Flask server defining API routes.
-      * `api/utils.py`: Contains the critical `prepare_features_from_raw` function for robust inference.
+## Documentation
+
+See [`project_paper.md`](project_paper.md) for the project report and methodology.
