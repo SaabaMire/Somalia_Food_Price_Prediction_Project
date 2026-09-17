@@ -24,7 +24,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 # Train all three models
 lr = LinearRegression().fit(X_train, y_train)
 rf = RandomForestRegressor(
-    n_estimators=100, random_state=42, n_jobs=-1).fit(X_train, y_train)
+    n_estimators=100, random_state=42, n_jobs=1).fit(X_train, y_train)
 gbr = GradientBoostingRegressor(
     n_estimators=100, random_state=42).fit(X_train, y_train)
 
@@ -54,7 +54,7 @@ model_metrics["gradient_boosting"] = get_metrics(y_test, gbr_pred)
 # Save metrics for the API
 with open("models/model_metrics.json", "w") as f:
     json.dump(model_metrics, f, indent=4)
-print("\n✅ Metrics saved.")
+print("\nMetrics saved.")
 
 # Sanity checks (3 minimum required)
 test_indices = [5, 100, 200]
@@ -69,7 +69,7 @@ for i in test_indices:
         f"Row {i} - Actual: {y_true:,.0f} | LR: {p_lr:,.0f} | RF: {p_rf:,.0f} | GBR: {p_gbr:,.0f}")
 
 # Save models
-joblib.dump(lr, "models/lr_food_model.joblib")
-joblib.dump(rf, "models/rf_food_model.joblib")
-joblib.dump(gbr, "models/gbr_food_model.joblib")
-print("\n✅ All models saved and ready.")
+joblib.dump(lr, "models/lr_food_model.joblib", compress=3)
+joblib.dump(rf, "models/rf_food_model.joblib", compress=3)
+joblib.dump(gbr, "models/gbr_food_model.joblib", compress=3)
+print("\nAll models saved and ready.")

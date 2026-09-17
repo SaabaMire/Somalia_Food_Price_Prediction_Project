@@ -107,10 +107,12 @@ Open a second terminal:
 ```bash
 cd frontend
 npm install
+copy .env.example .env.local
 npm run dev
 ```
 
-Open the local URL printed by Vite. The frontend is configured to call the Flask API on port `8000`.
+On macOS or Linux, use `cp .env.example .env.local` instead of `copy`.
+Open the local URL printed by Vite. `VITE_API_BASE_URL` tells the frontend where to find the Flask API.
 
 ## API Usage
 
@@ -161,3 +163,33 @@ Example response:
 ## Documentation
 
 See [`project_paper.md`](project_paper.md) for the project report and methodology.
+
+## Deployment
+
+Deploy the backend first, then give its public URL to the frontend.
+
+### Railway backend
+
+1. Create a Railway project from this GitHub repository.
+2. Keep the root directory set to the repository root.
+3. Railway installs `requirements.txt` and uses the included `Procfile`:
+
+   ```text
+   web: gunicorn --bind 0.0.0.0:$PORT api.app:app
+   ```
+
+4. Generate a public Railway domain and verify that opening it displays the API welcome message.
+
+### Vercel frontend
+
+1. Import the same GitHub repository into Vercel.
+2. Set **Root Directory** to `frontend`.
+3. Select the **Vite** framework preset.
+4. Use `npm run build` as the build command and `dist` as the output directory.
+5. Add this environment variable:
+
+   ```env
+   VITE_API_BASE_URL=https://your-railway-domain
+   ```
+
+6. Deploy, then test the metrics table and all three prediction models.
