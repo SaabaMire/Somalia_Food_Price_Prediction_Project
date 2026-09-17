@@ -2,6 +2,8 @@
 
 A full-stack machine-learning application for estimating food commodity prices in Somalia. The project combines a Flask prediction API, three regression models, and a React/Vite interface.
 
+[View the live application](https://somalia-food-price-prediction-proje.vercel.app/) · [Open the prediction API](https://web-production-0bd50.up.railway.app/)
+
 ## Overview
 
 The application asks for five inputs:
