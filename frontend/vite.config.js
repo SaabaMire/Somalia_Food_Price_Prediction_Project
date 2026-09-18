@@ -7,4 +7,9 @@ export default defineConfig({
   plugins: [react(),
         tailwindcss(),
   ],
+  preview: {
+    allowedHosts: [
+      'somaliafoodpricepredictionproject-production.up.railway.app',
+    ],
+  },
 })
