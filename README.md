@@ -195,3 +195,13 @@ Deploy the backend first, then give its public URL to the frontend.
    ```
 
 6. Deploy, then test the metrics table and all three prediction models.
+
+### Railway frontend alternative
+
+If `vercel.app` domains are unavailable on your network, deploy the frontend as a second Railway service:
+
+1. Add a new service to the existing Railway project from this GitHub repository.
+2. Set the service **Root Directory** to `frontend`.
+3. Add `VITE_API_BASE_URL=https://web-production-0bd50.up.railway.app` as a service variable.
+4. Railway will build the Vite app and use `frontend/Procfile` to serve it.
+5. Generate a public domain for the frontend service under **Settings → Networking**.
